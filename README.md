@@ -1,6 +1,10 @@
 # pitfalls-android
 
 ***
+#### 2016-04-11 (一)
+情景: 使用SourceTree第三方版本管理提交代码时, 出现部分文件无法提交的情况, 且不能进行Commit, Ignore等操作.
+解决方案：此时可考虑使用终端命令: git add . 完成提交.
+注意: 要保证在.git文件目录下使用命令.
 
 ### 4.布局优化
 根据Android源码的分析(具体见文章)，RelativeLayout将对所有的子View进行两次measure，而LinearLayout在使用weight属性进行布局时也会对子View进行两次measure，如果他们位于整个View树的顶端时并可能进行多层的嵌套时，位于底层的View将会进行大量的measure操作，大大降低程序性能。因此，应尽量将RelativeLayout和LinearLayout置于View树的底层，并减少嵌套。  
